@@ -1,11 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 //import * as path from 'path'
 
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000
+    port: 3000,
+  },
+  build: {
+    outDir: "dist",
   },
   // resolve: {
   //   alias: {
@@ -17,4 +20,4 @@ export default defineConfig({
   //     styles: `${path.resolve(__dirname, "./src/styles")}`
   //   },
   // }
-})
+});
